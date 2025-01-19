@@ -9,11 +9,12 @@ jobs:
     steps:
     
       # Clean
-      - name: Clean Docker system
-        run: |
-          docker system prune -af
-          docker volume prune -f
-          docker network prune -f
+      - name: Maximize build space
+        uses: easimon/maximize-build-space@master
+        with:
+          root-reserve-mb: 512
+          swap-size-mb: 1024
+          remove-dotnet: 'true'
           
       # Checkout
       - name: Checkout repository
