@@ -22,11 +22,6 @@ jobs:
           sudo docker network prune -f
           sudo docker image prune -af
           sudo rm -rf /var/log/*
-          
-      - name: Clean /mnt directory
-        run: |
-          echo "Cleaning up /mnt directory..."
-          sudo rm -rf /mnt/*
 
       # Maximize build space
       - name: Maximize build space
