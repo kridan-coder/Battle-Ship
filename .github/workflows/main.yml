@@ -10,7 +10,7 @@ jobs:
     
       # Clean
       - name: Free disk space
-        run: .github/workflows/scripts/free_disk_space.sh
+        run: scripts/free_disk_space.sh
           
       # Checkout
       - name: Checkout repository
