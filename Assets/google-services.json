@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "463448738083",
+    "project_id": "battle-ship-37565",
+    "storage_bucket": "battle-ship-37565.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:463448738083:android:91be7cff561a341701a496",
+        "android_client_info": {
+          "package_name": "com.blogpost.BattleBoats"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBsiLNb4iNfUpjJGlhfnla6Iel-eC7J_JU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
