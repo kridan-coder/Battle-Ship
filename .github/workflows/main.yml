@@ -8,7 +8,27 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     
-      # Clean
+      # Clean up disk space
+      - name: Clean up temporary files and caches
+        run: |
+          echo "Cleaning up temporary files and caches..."
+          sudo rm -rf /tmp/*
+          sudo apt-get clean
+          sudo rm -rf /var/cache/apt/archives/*
+          sudo rm -rf ~/.cache/unity
+          sudo rm -rf ~/.local/share/unity3d/*
+          sudo docker system prune -af
+          sudo docker volume prune -f
+          sudo docker network prune -f
+          sudo docker image prune -af
+          sudo rm -rf /var/log/*
+          
+      - name: Clean /mnt directory
+        run: |
+          echo "Cleaning up /mnt directory..."
+          sudo rm -rf /mnt/*
+
+      # Maximize build space
       - name: Maximize build space
         uses: easimon/maximize-build-space@master
         with:
