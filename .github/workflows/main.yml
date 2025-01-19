@@ -9,12 +9,8 @@ jobs:
     steps:
     
       # Clean
-      - name: Maximize build space
-        uses: easimon/maximize-build-space@master
-        with:
-          root-reserve-mb: 512
-          swap-size-mb: 1024
-          remove-dotnet: 'true'
+      - name: Free disk space
+        run: .github/workflows/scripts/free_disk_space.sh
           
       # Checkout
       - name: Checkout repository
