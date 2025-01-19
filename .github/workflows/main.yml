@@ -7,6 +7,14 @@ jobs:
     name: Build my project ✨
     runs-on: ubuntu-latest
     steps:
+    
+      # Clean
+      - name: Clean Docker system
+        run: |
+          docker system prune -af
+          docker volume prune -f
+          docker network prune -f
+          
       # Checkout
       - name: Checkout repository
         uses: actions/checkout@v4
